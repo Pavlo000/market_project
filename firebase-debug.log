@@ -1,0 +1,31 @@
+[debug] [2023-05-10T13:53:00.127Z] ----------------------------------------------------------------------
+[debug] [2023-05-10T13:53:00.128Z] Command:       C:\Users\Pasha\AppData\Roaming\nvm\v17.1.0\node.exe C:\Users\Pasha\AppData\Roaming\nvm\v17.1.0\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-10T13:53:00.129Z] CLI Version:   12.0.0
+[debug] [2023-05-10T13:53:00.129Z] Platform:      win32
+[debug] [2023-05-10T13:53:00.129Z] Node Version:  v17.1.0
+[debug] [2023-05-10T13:53:00.130Z] Time:          Wed May 10 2023 16:53:00 GMT+0300 (Eastern European Summer Time)
+[debug] [2023-05-10T13:53:00.130Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-10T13:53:00.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-10T13:53:00.135Z] > authorizing via signed-in user (pmoroz2004@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\market_project
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2023-05-10T13:55:39.047Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Pasha\AppData\Roaming\nvm\v17.1.0\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.

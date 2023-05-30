@@ -1,0 +1,43 @@
+@import '/src/assets/styles/main.scss';
+
+.SearchBar {
+  position: relative;
+
+  display: flex;
+
+  box-shadow: 0 0 $space-s $grey-c;
+  border-radius: $space-s;
+
+  &:hover,
+  &:has(&__input:focus) {
+    box-shadow: 0 0 $space-s $grey-c2;
+  }
+
+  &__label {
+    margin: auto 0;
+    margin-left: $space-m;
+    border: 0;
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: $space-m 0;
+    padding-left: $space-l;
+    border: 0;
+
+    background-color: #fff;
+
+    border-radius: $space-s;
+    outline: 0;
+
+    &:focus {
+      border-color: $grey-c;
+    }
+  }
+}

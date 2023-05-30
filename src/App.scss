@@ -1,0 +1,25 @@
+@import '/src/assets/styles/main.scss';
+
+.App {
+  &__top {
+    min-height: calc(100vh - ($footer-height + $border-widht-s));
+  }
+
+  &__bottom {
+    border-top: $border-widht-s solid $black-c;
+  }
+
+  &__section {
+    padding-bottom: $space-xl;
+
+    &--header {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+    }
+
+    &--footer {
+      padding-bottom: 0;
+    }
+  }
+}

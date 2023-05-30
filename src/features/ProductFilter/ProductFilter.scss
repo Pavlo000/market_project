@@ -1,0 +1,85 @@
+@import '../../assets/styles/main.scss';
+
+.ProductFilter {
+  display: flex;
+  flex-direction: column;
+  padding: $space-l;
+  gap: $space-m;
+
+  box-shadow: 0 5px 10px $grey-c;
+  border-radius: $space-s;
+
+  &:hover {
+    box-shadow: 0 5px 10px $grey-c2;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    @include onTablet() {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+
+  &__block {
+    display: flex;
+    gap: $space-l;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    gap: $space-m;
+    margin-top: 10px;
+
+    @include onTablet() {
+      display: flex;
+    }
+  }
+
+  &__title {
+    line-height: 25px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin-top: $space-s;
+    border: 0;
+    gap: $space-l;
+    padding: $space-s;
+
+    background-color: transparent;
+    box-shadow: 0 0 5px $grey-c;
+    border-radius: $space-s;
+  }
+
+  &__arrow {
+    opacity: 0;
+
+    &--down {
+      opacity: 1;
+    }
+
+    &--up {
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__input {
+    width: 100px;
+
+    outline: none;
+  }
+
+  &__currency {
+    color: $braun-c2;
+  }
+}

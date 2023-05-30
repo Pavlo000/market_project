@@ -1,0 +1,6 @@
+.link {
+  @include hover(all) {
+    cursor: pointer;
+    color: $braun-c;
+  };
+}

@@ -1,0 +1,42 @@
+@import '/src/assets/styles/main.scss';
+
+.Slider {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  border-radius: 5px 5px 0 0;
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #eaeaea;
+
+    text-align: center;
+    font-size: 18px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__next {
+    color: #eaeaea;
+  }
+
+  &__prev {
+    color: #eaeaea;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #eaeaea;
+}
+

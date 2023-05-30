@@ -1,0 +1,17 @@
+@import '/src/assets/styles/main.scss';
+
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  padding: $space-xl 0;
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: $space-l;
+  }
+
+  &__list {
+    display: flex;
+    gap: $space-m;
+  }
+}

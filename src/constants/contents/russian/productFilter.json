@@ -1,0 +1,10 @@
+{
+  "sortLabel": "Сортировать за",
+  "priceLabel": "Цена",
+  "yearLabel": "Год",
+  "filterByPriceLabel": "Сортировать по цене",
+  "fromLabel": "От",
+  "toLabel": "До",
+  "setLabel": "Установить",
+  "resetLabel": "Скинуть"
+}

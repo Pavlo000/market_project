@@ -1,0 +1,44 @@
+@import "../../assets/styles/main.scss";
+
+.Loader {
+  position: absolute;
+  margin: 50px calc(50% - 26px);
+
+  display: inline-block;
+
+  &__wrapper {
+    display: inline-block;
+    padding: 1px;
+
+
+    background: linear-gradient(90deg , $white-c 35%, $braun-c 63%, $braun-c2 100%);
+
+    border-radius: 50%;
+
+    animation: run $duration-animation infinite;
+
+    @keyframes run {
+      25% {
+        transform: rotate(0.25turn);
+      }
+      50% {
+        transform: rotate(0.5turn);
+      }
+      75% {
+        transform: rotate(0.75turn);
+      }
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+  }
+
+  &__spinner {
+    width: 50px;
+    height: 50px;
+
+    background-color: $white-c;
+
+    border-radius: 50%;
+  }
+}

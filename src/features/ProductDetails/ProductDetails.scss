@@ -1,0 +1,60 @@
+@import '/src/assets/styles/main.scss';
+
+.ProductDetails {
+  position: relative;
+
+  min-height: 300px;
+
+  box-shadow: 0 5px 10px $grey-c;
+  border-radius: $space-s;
+
+  &__close {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+
+    transition: $duration-transition;
+    transform-origin: right top;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__title {
+    padding: $space-l;
+
+    text-align: center;
+  }
+
+  &__details {
+    padding: $space-m;
+  }
+
+  &__table {
+    margin: auto 0 $space-xl auto;
+
+    & tr th {
+      display: block;
+      margin-right: $space-m;
+
+      color: $dark-c;
+    }
+
+    & tr * {
+      padding: $space-m 0;
+    }
+
+    & tr td {
+      text-align: right;
+    }
+  }
+
+  &__article {
+    text-align: justify;
+  }
+
+  &__article-title {
+    margin-bottom: $space-m;
+  }
+}

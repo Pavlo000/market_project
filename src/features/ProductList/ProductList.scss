@@ -1,0 +1,32 @@
+@import '../../assets/styles/main.scss';
+
+.ProductList {
+  position: relative;
+
+  min-height: 150px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+  }
+
+  &__item {
+    box-shadow: 0 5px 10px $grey-c;
+    border-radius: $space-s;
+
+    &:hover {
+      box-shadow: 0 5px 10px $grey-c2;
+    }
+  }
+
+  &__link {
+    color: unset;
+
+    text-decoration: none;
+
+    &:hover {
+      color: unset;
+    }
+  }
+}

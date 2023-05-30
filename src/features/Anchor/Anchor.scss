@@ -1,0 +1,25 @@
+@import '../../assets//styles/main.scss';
+
+.Anchor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+
+  background-color: $white-c;
+
+  border-radius: 40%;
+  box-shadow: 0 0 2px $grey-c;
+
+
+  &__link {
+    display: block;
+    padding: $space-m;
+
+    transition: $duration-transition;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

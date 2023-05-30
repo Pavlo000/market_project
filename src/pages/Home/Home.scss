@@ -1,0 +1,46 @@
+@import '/src/assets/styles/main.scss';
+
+.Home {
+  &__section {
+    display: block;
+    margin-bottom: 20px;
+
+    &--grid {
+      @include onTablet() {
+        display: grid;
+        grid-template-columns: repeat(1fr, 4);
+        gap: $space-l;
+      }
+
+      @include onNotebook() {
+        grid-template-columns: repeat(1fr, 8);
+      }
+    }
+  }
+
+  &__block {
+    &--left_grid {
+      min-width: 300px;
+
+      grid-column: 1 / 2;
+
+      @include onNotebook() {
+        grid-column: 1 / 4;
+      }
+    }
+
+    &--right {
+      grid-column: 2 / 4;
+
+      @include onTablet() {
+        max-width: 290px;
+      }
+
+      @include onNotebook() {
+        max-width: unset;
+        width: 590px;
+        grid-column: 4 / 8;
+      }
+    }
+  }
+}

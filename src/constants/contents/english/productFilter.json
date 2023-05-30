@@ -1,0 +1,10 @@
+{
+  "sortLabel": "Sort by",
+  "priceLabel": "Price",
+  "yearLabel": "Year",
+  "filterByPriceLabel": "Sort by price",
+  "fromLabel": "From",
+  "toLabel": "To",
+  "setLabel": "Set",
+  "resetLabel": "Reset"
+}

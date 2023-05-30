@@ -1,0 +1,25 @@
+@import '/src/assets/styles/main.scss';
+
+.Menu {
+  position: absolute;
+  z-index: -1;
+  left: auto;
+  top: 65px;
+  right: -$space-m;
+
+  padding: $space-l;
+
+  background-color: $white-c;
+  box-shadow: 0 0 $space-m $grey-c2;
+  border-radius: $space-s;
+
+  &--isOpen {
+    transform: translateY(-1px);
+    transition: transform 1s;
+  }
+
+  &--isClosed {
+    transform: translateY(-300px);
+    transition: transform 1s;
+  }
+}
