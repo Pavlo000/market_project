@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/market_project/static/css/main.831df258.css",
+    "main.js": "/market_project/static/js/main.a37a8c40.js",
+    "static/media/logo.svg": "/market_project/static/media/logo.dc1a127408ffc43497540f5c22ce26f3.svg",
+    "static/media/twitter.svg": "/market_project/static/media/twitter.efd19a726564a73ace0a89b40bedf7c7.svg",
+    "index.html": "/market_project/index.html",
+    "static/media/up.svg": "/market_project/static/media/up.b053fd421752f23480a6a03ecd44da56.svg",
+    "static/media/search.svg": "/market_project/static/media/search.f567886201c3fdd7ca599bcaf27fa029.svg",
+    "static/media/down.svg": "/market_project/static/media/down.cf66db69294ae2ea649d0772bd8ceaff.svg",
+    "static/media/facebook.svg": "/market_project/static/media/facebook.14158d091388a24f951d9a02d17e6e2f.svg",
+    "static/media/cross.svg": "/market_project/static/media/cross.47ab9b1311d25c0cccca3f1551f8235e.svg",
+    "main.831df258.css.map": "/market_project/static/css/main.831df258.css.map",
+    "main.a37a8c40.js.map": "/market_project/static/js/main.a37a8c40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.831df258.css",
+    "static/js/main.a37a8c40.js"
+  ]
+}
