@@ -11,18 +11,13 @@ export const Navigation: React.FC = () => {
     <nav className="Navigation">
       <ul className="Navigation__list">
         <li className="Navigation__item">
-          <Link to="/contacts" className="Navigation__link link">
+          <Link to="/about" className="Navigation__link button-text link">
             {content[lang].navigation.aboutLabel}
           </Link>
         </li>
         <li className="Navigation__item">
-          <Link to="/contacts" className="Navigation__link link">
+          <Link to="/contacts" className="Navigation__link link button-text">
             {content[lang].navigation.contactLabel}
-          </Link>
-        </li>
-        <li className="Navigation__item">
-          <Link to="/contacts" className="Navigation__link link">
-            {content[lang].navigation.polisyLabel}
           </Link>
         </li>
       </ul>

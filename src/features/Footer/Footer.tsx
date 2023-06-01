@@ -23,18 +23,18 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="Footer__section">
-        <span className="Footer__subtitle">
+        <span className="Footer__subtitle regular-text">
           {content[lang].footer.socialLabel}
           :
         </span>
         <ul className="Footer__list">
-          <li>
-            <a href="https://www.facebook.com/" className="link">
+          <li className="Footer__item">
+            <a href="https://www.facebook.com/" className="Footer__link link">
               <FacebookIcon width={18} height={18} />
             </a>
           </li>
-          <li>
-            <a href="https://www.twitter.com/" className="link">
+          <li className="Footer__item">
+            <a href="https://www.twitter.com/" className="Footer__link link">
               <TwitterIcon width={18} height={18} />
             </a>
           </li>

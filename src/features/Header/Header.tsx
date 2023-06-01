@@ -39,6 +39,7 @@ export const Header: React.FC = () => {
           <button
             type="button"
             className={classNames(
+              'form-text',
               'dropdown__link',
               {
                 'dropdown__link--active': lang === languageCode,
@@ -72,7 +73,7 @@ export const Header: React.FC = () => {
           <button
             type="button"
             data-value={lang}
-            className="dropdown__button"
+            className="dropdown__button regular-text"
             onMouseMove={() => setIsOpenLang(true)}
           >
             {content[lang].header.languageLabel}

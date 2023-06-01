@@ -2,7 +2,8 @@ import { IProductDetails } from './ProductDetails';
 
 export interface IProduct {
   id: string,
-  name: string,
+  title: string,
+  subtitle: string,
   location: string,
   year: number,
   condition: 'used' | 'new',

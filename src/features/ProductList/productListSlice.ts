@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import {
-  PayloadAction,
   SerializedError,
   createAsyncThunk,
   createSlice,
@@ -37,19 +36,7 @@ export const getProductsAsync = createAsyncThunk(
 export const productListSlice = createSlice({
   name: 'productList',
   initialState,
-  reducers: {
-    searchProducts: (
-      state,
-      action: PayloadAction<{ products: IProduct[], search: string }>,
-    ) => {
-      const normalizeSearch = action.payload.search.trim().toLowerCase();
-
-      state.products.data = action.payload.products
-        .filter(product => (
-          product.name.toLowerCase().includes(normalizeSearch)
-        ));
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getProductsAsync.pending, (state) => {

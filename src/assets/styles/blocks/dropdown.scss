@@ -71,6 +71,7 @@
     display: block;
     min-width: max-content;
     width: 100%;
+    margin: 0;
     border: 0;
 
     color: $black-c;
@@ -79,6 +80,7 @@
     text-align: center;
     text-decoration: none;
     padding: $space-m $space-m;
+    border-radius: 0;
 
     &--active {
       background-color: $braun-c3;

@@ -18,10 +18,10 @@ export const ProductItem: React.FC<Props> = ({ product }) => {
     .slice(0, 50);
 
   const descriptionElement = (
-    <p className="ProductItem__description body-text">
+    <p className="ProductItem__description form-text">
       {description}
       {description !== product.description && (
-        <button type="button" className="link">
+        <button type="button" className="ProductItem__button form-text link">
           {content[lang].productItem.readMoreLabel}
         </button>
       )}
@@ -34,23 +34,23 @@ export const ProductItem: React.FC<Props> = ({ product }) => {
         <img
           className="ProductItem__photo"
           src={product.images[0]}
-          alt={product.name}
+          alt={product.title}
         />
       </div>
       <div className="ProductItem__section">
 
         <div className="ProductItem__block">
           <h4 className="ProductItem__title link">
-            {product.name}
+            {product.title}
           </h4>
-          <p className="ProductItem__subtitle body-text">
-            {product.location}
+          <p className="ProductItem__subtitle regular-text">
+            {product.subtitle}
           </p>
           {descriptionElement}
         </div>
 
         <div className="ProductItem__block">
-          <p className="ProductItem__price big-text">
+          <p className="ProductItem__price regular-text">
             {`${product.price.value} ${product.price.currency}`}
           </p>
         </div>

@@ -61,7 +61,7 @@ export const ProductDetails: React.FC = () => {
             />
           </div>
           <div className="ProductDetails__details">
-            <h2 className="ProductDetails__title">{product.name}</h2>
+            <h2 className="ProductDetails__title">{product.title}</h2>
             <table className="ProductDetails__table">
               <tbody>
                 <tr>
@@ -72,12 +72,6 @@ export const ProductDetails: React.FC = () => {
                 </tr>
                 <tr>
                   <th className="medium-text">
-                    {`${content[lang].productDetails.locationLabel}:`}
-                  </th>
-                  <td>{product.location}</td>
-                </tr>
-                <tr>
-                  <th className="medium-text">
                     {`${content[lang].productDetails.priceLabel}:`}
                   </th>
                   <td>
@@ -85,7 +79,7 @@ export const ProductDetails: React.FC = () => {
                   </td>
                 </tr>
                 {Object.entries(product.specs).map(row => (
-                  <tr>
+                  <tr key={row[0]}>
                     <th className="medium-text">
                       {row[0]}
                       :

@@ -23,6 +23,11 @@ export const ProductFilter: React.FC = () => {
   const [priceRangeLocal, setPriceRangeLocal] = useState<
   { min: null | number, max: null | number }
   >({ min: null, max: null });
+  const priceRange = useAppSelector(state => state.productFilter.priceRange);
+
+  const getPrice = (value: 'min' | 'max') => {
+    return priceRangeLocal[value] || priceRange[value] || '';
+  };
 
   const handleClick = (value: string) => {
     switch (sortBy) {
@@ -67,7 +72,7 @@ export const ProductFilter: React.FC = () => {
     <div className="ProductFilter">
       <div className="ProductFilter__section">
         <div className="ProductFilter__block">
-          <p className="ProductFilter__title uppercase">
+          <p className="ProductFilter__title uppercase-text form-text">
             {content[lang].productFilter.sortLabel}
           </p>
         </div>
@@ -75,7 +80,7 @@ export const ProductFilter: React.FC = () => {
         <div className="ProductFilter__block">
           <button
             type="button"
-            className="ProductFilter__button uppercase small-text link"
+            className="ProductFilter__button uppercase-text link"
             data-value={sortBy}
             onClick={() => handleClick('price')}
           >
@@ -94,7 +99,7 @@ export const ProductFilter: React.FC = () => {
           </button>
           <button
             type="button"
-            className="ProductFilter__button uppercase small-text link"
+            className="ProductFilter__button uppercase-text link"
             data-value={sortBy}
             onClick={() => handleClick('year')}
           >
@@ -114,7 +119,7 @@ export const ProductFilter: React.FC = () => {
 
       <div className="ProductFilter__section">
         <div className="ProductFilter__block">
-          <p className="ProductFilter__title uppercase">
+          <p className="ProductFilter__title uppercase-text form-text">
             {content[lang].productFilter.filterByPriceLabel}
             ,
             <span className="ProductFilter__currency">{' USD'}</span>
@@ -129,7 +134,7 @@ export const ProductFilter: React.FC = () => {
           >
 
             <label className="ProductFilter__label">
-              <p className="uppercase small-text">
+              <p className="uppercase-text">
                 {content[lang].productFilter.fromLabel}
               </p>
               <input
@@ -138,12 +143,12 @@ export const ProductFilter: React.FC = () => {
                 id="min-price"
                 min={0}
                 className="ProductFilter__input"
-                value={priceRangeLocal.min || 0}
+                value={getPrice('min')}
                 onChange={(event) => handleInput(event)}
               />
             </label>
             <label className="ProductFilter__label">
-              <p className="uppercase small-text">
+              <p className="uppercase-text">
                 {content[lang].productFilter.toLabel}
               </p>
               <input
@@ -152,7 +157,7 @@ export const ProductFilter: React.FC = () => {
                 id="max-price"
                 min={0}
                 className="ProductFilter__input"
-                value={priceRangeLocal.max || 0}
+                value={getPrice('max')}
                 onChange={(event) => handleInput(event)}
               />
             </label>
@@ -161,8 +166,9 @@ export const ProductFilter: React.FC = () => {
               type="submit"
               className="
                 ProductFilter__button
-                uppercase
-                small-text
+                button-text
+                uppercase-text
+                button
                 link
               "
             >
@@ -172,8 +178,9 @@ export const ProductFilter: React.FC = () => {
               type="button"
               className="
                 ProductFilter__button
-                uppercase
-                small-text
+                button-text
+                uppercase-text
+                button
                 link
               "
               onClick={handleReset}

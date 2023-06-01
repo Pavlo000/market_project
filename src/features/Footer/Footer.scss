@@ -14,4 +14,10 @@
     display: flex;
     gap: $space-m;
   }
+
+  &__link {
+    @include hover(all) {
+      transform: scale(1.1);
+    }
+  }
 }
