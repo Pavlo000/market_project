@@ -5,6 +5,7 @@ import productDetails from './productDetails.json';
 import searchBar from './searchBar.json';
 import productFilter from './productFilter.json';
 import productItem from './productItem.json';
+import pagination from './pagination.json';
 
 export const en = {
   navigation,
@@ -14,4 +15,5 @@ export const en = {
   searchBar,
   productFilter,
   productItem,
+  pagination,
 };

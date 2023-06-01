@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { ProductItem } from '../ProductItem';
 import './ProductList.scss';
 import { getProductsAsync } from './productListSlice';
 import { Loader } from '../Loader';
+import { Pagination } from '../Pagination';
 
 export const ProductList: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +15,11 @@ export const ProductList: React.FC = () => {
   const search = useAppSelector(state => state.searchBar.input);
   const sortdBy = useAppSelector(state => state.productFilter.sortBy);
   const priceRange = useAppSelector(state => state.productFilter.priceRange);
+  const { page = 1 } = useParams();
   const [visibleProducts, setVisibleProducts] = useState(products);
+  const offset = 8;
+  const productsPerPage = visibleProducts
+    .slice((+page * offset) - offset, +page * offset);
 
   useEffect(() => {
     dispatch(getProductsAsync());
@@ -29,7 +34,7 @@ export const ProductList: React.FC = () => {
       ))
       .filter(product => (
         product.price.value > (priceRange.min || 0)
-          && product.price.value < (priceRange.max || 99999999)
+        && product.price.value < (priceRange.max || 99999999)
       ));
 
     const sortedProducts = filteredProducts.sort((a, b) => {
@@ -48,7 +53,8 @@ export const ProductList: React.FC = () => {
     });
 
     setVisibleProducts(sortedProducts);
-  }, [!!products.length, search, sortdBy, priceRange.max, priceRange.min]);
+  }, [!!products.length,
+    search, sortdBy, priceRange.max, priceRange.min, page]);
 
   return (
     <div className="ProductList">
@@ -59,15 +65,29 @@ export const ProductList: React.FC = () => {
           Something went wrong
         </p>
       )}
-      <ul className="ProductList__list">
-        {status === 'fullfield' && visibleProducts.map(product => (
-          <li key={product.id} className="ProductList__item">
-            <Link to={location.pathname === `/product/${product.id}` ? '/' : `/product/${product.id}`} className="ProductList__link">
-              <ProductItem product={product} />
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      {status === 'fullfield' && !!productsPerPage.length && (
+        <>
+          <ul className="ProductList__list">
+            {status === 'fullfield' && productsPerPage.map(product => (
+              <li key={product.id} className="ProductList__item">
+                <Link to={location.pathname.includes(product.id) ? `/products/${page}` : `/products/${page}/product/${product.id}`} className="ProductList__link">
+                  <ProductItem product={product} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="ProductList__pagination">
+            <Pagination
+              length={visibleProducts.length}
+              currentPage={+page}
+              offset={offset}
+              visiblePages={6}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };

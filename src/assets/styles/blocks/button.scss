@@ -1,7 +1,16 @@
-button {
-  height: 46px;
-  box-sizing: border-box;
-  background-color: $braun-c3;
-  padding: 0 55px;
-  border-radius: 4px;
+.button {
+  padding: 10px;
+
+  background-color: #fff;
+
+  border-radius: 5px;
+  box-shadow: 0 0 3px;
+
+  &--active {
+    background-color: $grey-c;
+
+    &:hover {
+      color: #000;
+    }
+  }
 }

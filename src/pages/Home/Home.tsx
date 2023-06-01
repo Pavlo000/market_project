@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
 
   return (
     <main className="Home">
-      {location.pathname === '/' && (
+      {location.pathname.match(/products\/\d+$|^\/$/) && (
         <div className="Home__section">
           <ProductFilter />
         </div>
@@ -51,7 +51,7 @@ export const Home: React.FC = () => {
         {currentWidth < 640 ? !isOpenRightElem && leftBlock : leftBlock}
         <Routes>
           <Route
-            path="product/:id"
+            path="/product/:id"
             element={rightBlock}
           />
         </Routes>

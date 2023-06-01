@@ -15,6 +15,9 @@
   &__link {
     display: block;
     padding: $space-m;
+    border: 0;
+
+    background-color: transparent;
 
     transition: $duration-transition;
 

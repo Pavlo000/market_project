@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
         <div className="App__section App__section--main container-xl">
           <Routes>
-            <Route path="*" element={<Home />} />
+            <Route path="/products?/:page?/*" element={<Home />} />
             <Route path="about" element={<About />} />
           </Routes>
         </div>

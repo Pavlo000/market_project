@@ -1,0 +1,24 @@
+@import "../../assets/styles/main.scss";
+
+.Pagination {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    display: block;
+    
+    color: $grey-c3;
+    text-decoration: none;
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+}
