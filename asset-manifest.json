@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/market_project/static/css/main.261e05be.css",
-    "main.js": "/market_project/static/js/main.6364dffd.js",
+    "main.css": "/market_project/static/css/main.d8aaa462.css",
+    "main.js": "/market_project/static/js/main.b85f5dae.js",
     "static/media/logo.svg": "/market_project/static/media/logo.dc1a127408ffc43497540f5c22ce26f3.svg",
+    "static/media/world.svg": "/market_project/static/media/world.420b3c3a6471c41e5642728897574ade.svg",
     "static/media/twitter.svg": "/market_project/static/media/twitter.efd19a726564a73ace0a89b40bedf7c7.svg",
     "index.html": "/market_project/index.html",
     "static/media/up.svg": "/market_project/static/media/up.b053fd421752f23480a6a03ecd44da56.svg",
@@ -10,11 +11,11 @@
     "static/media/down.svg": "/market_project/static/media/down.cf66db69294ae2ea649d0772bd8ceaff.svg",
     "static/media/facebook.svg": "/market_project/static/media/facebook.14158d091388a24f951d9a02d17e6e2f.svg",
     "static/media/cross.svg": "/market_project/static/media/cross.47ab9b1311d25c0cccca3f1551f8235e.svg",
-    "main.261e05be.css.map": "/market_project/static/css/main.261e05be.css.map",
-    "main.6364dffd.js.map": "/market_project/static/js/main.6364dffd.js.map"
+    "main.d8aaa462.css.map": "/market_project/static/css/main.d8aaa462.css.map",
+    "main.b85f5dae.js.map": "/market_project/static/js/main.b85f5dae.js.map"
   },
   "entrypoints": [
-    "static/css/main.261e05be.css",
-    "static/js/main.6364dffd.js"
+    "static/css/main.d8aaa462.css",
+    "static/js/main.b85f5dae.js"
   ]
 }
